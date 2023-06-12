@@ -1,15 +1,12 @@
 <x-guest-layout>
     <!-- Header -->
-    <div class="header-bar header-fixed header-app header-bar-detached">
-        <a data-back-button href="#"><i class="bi bi-caret-left-fill font-11 color-theme ps-2"></i></a>
-        <a href="{{route('home')}}" class="header-title color-theme font-13">Back to Home</a>
-    </div>
+    @include('layouts.navigation')
 
 
     <div class="page-content header-clear-medium">
 
         <x-widget.sliders></x-widget.sliders>
-        
+
         <form method="POST" action="{{ route('login') }}">
             @csrf
             <div class="card card-style">
